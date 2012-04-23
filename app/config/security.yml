@@ -24,12 +24,14 @@ security:
 
         secured_area:
             pattern:    ^/demo/secured/
-            form_login:
-                check_path: /demo/secured/login_check
-                login_path: /demo/secured/login
+            fos_facebook:
+              app_url: "http://apps.facebook.com/appName/"
+              server_url: "http://localhost/facebookApp/"
+            anonymous: true
             logout:
                 path:   /demo/secured/logout
                 target: /demo/
+                handlers: ["fos_facebook.logout_handler"]
             #anonymous: ~
             #http_basic:
             #    realm: "Secured Demo Area"
