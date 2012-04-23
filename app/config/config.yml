@@ -49,6 +49,12 @@ doctrine:
         auto_generate_proxy_classes: %kernel.debug%
         auto_mapping: true
 
+fos_facebook:
+  file:   "%kernel.root_dir%/../vendor/facebook/php-sdk/src/base_facebook.php"
+  alias:  facebook
+  app_id: 1234567890
+  secret: 71eef5e9f9dcb2672721cd65bb11e395
+
 # Swiftmailer Configuration
 swiftmailer:
     transport: %mailer_transport%
